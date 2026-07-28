@@ -1,4 +1,7 @@
-[REDME.md](https://github.com/user-attachments/files/30332310/REDME.md)
+[README.md](https://github.com/user-attachments/files/30332310/REDME.md)
+
+Russian
+
 \# Twitch Points Calculator 🎮
 
 
@@ -27,3 +30,24 @@
 
 
 
+English
+
+Twitch Points Calculator 🎮
+
+A simple and convenient console calculator for quickly calculating channel points on Twitch. It helps you instantly see your net winnings and total payouts when betting on streams.
+
+✨ Features
+
+* Automatically rounds the result to the nearest whole number (just like on Twitch itself).
+
+* Shows the total payout amount and net profit separately.
+
+* Doesn't require Python installation—runs as a standalone application.
+
+🚀 Launch Instructions
+
+1. Download the twitch_money.exe file from this repository.
+
+2. Double-click it (on Windows).
+
+3. Enter the number of points, enter the bet odds, and press Enter.
