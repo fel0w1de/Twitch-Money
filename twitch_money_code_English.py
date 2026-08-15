@@ -1,6 +1,7 @@
 
 points = int(input("Enter the number of points awarded: "))
-multiplier = float(input("Enter the betting odds: "))
+multiplier = float(input("Enter the betting odds: ").replace(",", "."))
+
 
 
 total_payout = int(points * multiplier)
