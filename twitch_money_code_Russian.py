@@ -1,6 +1,6 @@
 
 points = int(input("Введите количество поставленных баллов: "))
-multiplier = float(input("Введите коэффициент ставки: "))
+multiplier = float(input("Введите коэффициент ставки: ").replace(",", "."))
 
 
 total_payout = int(points * multiplier)
