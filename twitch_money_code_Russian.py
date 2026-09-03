@@ -1,9 +1,13 @@
 
+
+import msvcrt
+
+
 points = int(input("Введите количество поставленных баллов: "))
 multiplier = float(input("Введите коэффициент ставки: ").replace(",", "."))
 
 
-total_payout = int(points * multiplier)
+total_payout = round(points * multiplier)
 net_profit = total_payout - points
 
 
@@ -13,4 +17,6 @@ print(f"Чистый выигрыш составит: {net_profit} баллов"
 
 
 
-input("\nНажми Enter, чтобы закрыть программу...")
+
+print("\nНажмите любую кнопку, чтобы закрыть программу...")
+msvcrt.getch()
