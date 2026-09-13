@@ -19,6 +19,8 @@ print(f"The net gain will be: {net_profit} points")
 
 
 print("\nPress any key to close the program...")
-msvcrt.getch()
 
-
+try:
+    msvcrt.getch()
+except Exception:
+    input()

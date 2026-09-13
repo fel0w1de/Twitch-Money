@@ -19,4 +19,8 @@ print(f"Чистый выигрыш составит: {net_profit} баллов"
 
 
 print("\nНажмите любую кнопку, чтобы закрыть программу...")
-msvcrt.getch()
+
+try:
+    msvcrt.getch()
+except Exception:
+    input()
