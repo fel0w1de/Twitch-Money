@@ -22,8 +22,11 @@ else:
     if hour_12 == 0:
         hour_12 = 12
 
-    min_clean = str(int(now.strftime("%M")))
-    sec_clean = str(int(now.strftime("%S")))
+    #min_clean = str(int(now.strftime("%M")))
+    #sec_clean = str(int(now.strftime("%S")))
+
+    min_clean = now.strftime("%M")
+    sec_clean = now.strftime("%S")
 
     current_time = f"{now.month}.{now.day}.{now.year} {hour_12}:{min_clean}:{sec_clean}"
 
