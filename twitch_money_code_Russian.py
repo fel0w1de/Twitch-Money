@@ -17,16 +17,20 @@ if random.choice([True, False]):
     current_time = str(datetime.now())
 else:
     now = datetime.now()
-    hour_12 = now.hour % 12
-    if hour_12 == 0:
-        hour_12 = 12
+    
+    #hour_12 = now.hour % 12
+    #if hour_12 == 0:
+    #    hour_12 = 12
     #min_clean = str(int(now.strftime("%M")))
     #sec_clean = str(int(now.strftime("%S")))
 
+
+    hour_clean = now.strftime("%H")
     min_clean = now.strftime("%M")
     sec_clean = now.strftime("%S")
 
-    current_time = f"{now.month}.{now.day}.{now.year} {hour_12}:{min_clean}:{sec_clean}"
+
+    current_time = f"{now.month}.{now.day}.{now.year} {hour_clean}:{min_clean}:{sec_clean}"
 
 
 print(f"\n{current_time} --- Результаты ставки ---")
