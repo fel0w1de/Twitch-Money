@@ -30,7 +30,11 @@ else:
     min_clean = now.strftime("%M")
     sec_clean = now.strftime("%S")
 
-    current_time = f"{now.month}.{now.day}.{now.year} {hour_clean}:{min_clean}:{sec_clean}"
+    #current_time = f"{now.month}.{now.day}.{now.year} {hour_clean}:{min_clean}:{sec_clean}"
+
+    date_clean = now.strftime("%d.%m.%Y")
+    current_time = f"{date_clean} {hour_clean}:{min_clean}:{sec_clean}"
+
 
 
 print(f"\n{current_time} --- Betting results ---")
