@@ -13,11 +13,11 @@ multiplier = float(input("Enter the betting odds: ").replace(",", "."))
 total_payout = round(points * multiplier)
 net_profit = total_payout - points
 
-# current_time = datetime.now().strftime("[%d.%m.%Y %H:%M:%S]")
-if random.choice([True, False]):
-    current_time = str(datetime.now())
-else:
-    now = datetime.now()
+current_time = datetime.now().strftime("[%d.%m.%Y %H:%M:%S]")
+#if random.choice([True, False]):
+#    current_time = str(datetime.now())
+#else:
+#    now = datetime.now()
     
     #hour_12 = now.hour % 12
     #if hour_12 == 0:
@@ -26,16 +26,18 @@ else:
     #min_clean = str(int(now.strftime("%M")))
     #sec_clean = str(int(now.strftime("%S")))
 
-    hour_clean = now.strftime("%H")
-    min_clean = now.strftime("%M")
-    sec_clean = now.strftime("%S")
+    #hour_clean = now.strftime("%H")
+    #min_clean = now.strftime("%M")
+    #sec_clean = now.strftime("%S")
 
     #current_time = f"{now.month}.{now.day}.{now.year} {hour_clean}:{min_clean}:{sec_clean}"
 
-    date_clean = now.strftime("%d.%m.%Y")
-    current_time = f"{date_clean} {hour_clean}:{min_clean}:{sec_clean}"
+    #date_clean = now.strftime("%d.%m.%Y")
+    #current_time = f"{date_clean} {hour_clean}:{min_clean}:{sec_clean}"
 
-
+#0.5.0
+#def save_bet_to_history(time_str, pts, mult, payout, profit):
+#    try:
 
 print(f"\n{current_time} --- Betting results ---")
 print(f"You will receive in total: {total_payout} points")
