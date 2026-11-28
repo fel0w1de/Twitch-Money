@@ -2,6 +2,7 @@
 
 import msvcrt
 from datetime import datetime
+import webbrowser
 import sys
 
 lang_choice = input("Select language / Выберите язык (1 - Русский, 2 - English, ru / en): ")
@@ -12,6 +13,37 @@ elif lang_choice == "2" or lang_choice == "en":
     lang = "en"
 else:
     lang = "mix"
+
+release_date = datetime(2026, 11, 28)
+days_passed = (datetime.now() - release_date).days
+DEV_CODE = "k9X4mP2q"
+RELEASES_URL = "https://github.com/fel0w1de/Twitch-Money/releases/tag/0.4.2"
+
+if days_passed >= 30:
+    while True:
+        if lang == "ru":
+            ans = input("\n[!] Поддержка этой версии прекращена (прошёл 1 месяц).\nВведите '1' чтобы открыть страницу обновлений: ")
+        else:
+            ans = input("\n[!] Support for this version has ended (1 month passed).\nEnter '1' to open the updates page: ")
+            
+        if ans == "1":
+            print("Открываю браузер... / Opening browser...")
+            webbrowser.open(RELEASES_URL)
+            sys.exit()
+        elif ans == DEV_CODE:
+            break
+
+elif days_passed >= 7:
+    if lang == "ru":
+        ans = input("\n[?] Прошла неделя с выхода версии. Хотите проверить обновления? (1 - Да, 2 - Нет): ")
+    else:
+        ans = input("\n[?] A week has passed since release. Do you want to check for updates? (1 - Yes, 2 - No): ")
+        
+    if ans == "1":
+        print("Открываю браузер... / Opening browser...")
+        webbrowser.open(RELEASES_URL)
+        sys.exit()
+
 #2
 
 error_count = 0
@@ -60,18 +92,18 @@ while True:
         
         if points > 10000:
             print(msg_limit)
-            error_count += 1
-            if error_count >= 3:
-                print(msg_exit)
-                sys.exit()
+            #error_count += 1
+            #if error_count >= 3:
+            #    print(msg_exit)
+            #    sys.exit()
             continue
 
         break
     except ValueError:
-        error_count += 1
-        if error_count >= 3:
-            print(msg_exit)
-            sys.exit()
+        #error_count += 1
+        #if error_count >= 3:
+        #    print(msg_exit)
+        #    sys.exit()
         print(msg_err_int)
 
 while True:
@@ -80,10 +112,10 @@ while True:
         
         break
     except ValueError:
-        error_count += 1
-        if error_count >= 3:
-            print(msg_exit)
-            sys.exit()
+        #error_count += 1
+        #if error_count >= 3:
+        #    print(msg_exit)
+        #    sys.exit()
         print(msg_err_float)
 
 #points = int(input("Введите количество поставленных баллов: "))
